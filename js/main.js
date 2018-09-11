@@ -1,16 +1,15 @@
 
-var i = 0;
-var images = [];
-var slider = document.querySelector('#slider');
-var playing = true;
-var timer;
-var images = new Array();
+let i = 0;
+let images = [];
+const slider = document.querySelector('#slider');
+let playing = true;
+let timer;
 timeOut();
 
 
-images[0] ='../img/bird.jpg';
-images[1] = '../img/windows.jpeg';
-images[2] = '../img/tree.jpeg';
+images[0] = 'img/bird.jpg';
+images[1] = 'img/windows.jpeg';
+images[2] = 'img/tree.jpeg';
 
 
 function slideImgNext() {
@@ -56,7 +55,7 @@ var right = document.querySelector('button--previous');
 var left = document.querySelector('button--next');
 var pause = document.querySelector('button--pause');
 
-document.addEventListener('click', function(event){
+document.addEventListener('click', (event) => {
 	if(event.target.className.includes('button--previous')){
 		console.log('previous');
 		timeOut();
@@ -64,7 +63,7 @@ document.addEventListener('click', function(event){
 	}
 });
 
-document.addEventListener('click', function(event){
+document.addEventListener('click', (event) => {
 	if(event.target.className.includes('button--next')){
 		console.log('next');
 		timeOut();
@@ -72,7 +71,7 @@ document.addEventListener('click', function(event){
 	}
 });
 
-document.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', (event) => {
 	if (event.keyCode == 37 || event.keyCode == 65) {
 		slideImgNext();
 		console.log('right');
@@ -83,7 +82,7 @@ document.addEventListener('keydown', function (event) {
 	}
 	
 });
-document.addEventListener('click', function(event){
+document.addEventListener('click', (event) => {
 	if(event.target.className.includes('button--pause')) {
 		if (playing) {
 			console.log('pause');
