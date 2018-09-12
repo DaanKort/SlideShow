@@ -39,36 +39,18 @@ function timeOut() {
 	timer = setInterval(slideImgNext, 2000);
 }
 	
-function nextImg() {
-    i = i + 1; 
-	i = i % images.length;
-}
-
-function prevImg() {
-	if (i === 0) { 
-        i = images.length; 
-    }
-    i = i - 2; 
-}
-
-var right = document.querySelector('button--previous');
-var left = document.querySelector('button--next');
-var pause = document.querySelector('button--pause');
-
-document.addEventListener('click', (event) => {
-	if(event.target.className.includes('button--previous')){
+const left = document.querySelector('#previous');
+const right = document.querySelector('#next');
+left.addEventListener('click', (event) => {	
 		console.log('previous');
 		timeOut();
-		slideImgPrevious()
-	}
+		slideImgPrevious();
 });
 
-document.addEventListener('click', (event) => {
-	if(event.target.className.includes('button--next')){
+right.addEventListener('click', (event) => {
 		console.log('next');
 		timeOut();
 		slideImgNext();
-	}
 });
 
 document.addEventListener('keydown', (event) => {
@@ -82,17 +64,19 @@ document.addEventListener('keydown', (event) => {
 	}
 	
 });
-document.addEventListener('click', (event) => {
-	if(event.target.className.includes('button--pause')) {
+const pause = document.querySelector('#pause');
+pause.addEventListener('click', (event) => {
 		if (playing) {
 			console.log('pause');
 			playing = false;
 			clearInterval(timer);
+			pause.innerHTML = "Play";
 		} else {
 			console.log('play');
 			playing = true;
 			timeOut();
-		}
-	}
+			pause.innerHTML = "Pause";
+		}	
+	console.log(pause);
 });
 window.onload = slideImgNext();
