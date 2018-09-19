@@ -1,9 +1,9 @@
 
-let i = 0;
-let images = [];
-const slider = document.querySelector('#slider');
-let playing = true;
-let timer;
+var i = 0;
+var images = [];
+var slider = document.querySelector('#slider');
+var playing = true;
+var timer;
 timeOut();
 
 images[0] = 'img/bird.jpg';
@@ -34,8 +34,8 @@ function timeOut() {
 	clearInterval(timer);	
 	timer = setInterval(slideImgNext, 2000);
 }	
-const left = document.querySelector('#previous');
-const right = document.querySelector('#next');
+var left = document.querySelector('#previous');
+var right = document.querySelector('#next');
 left.addEventListener('click', (event) => {	
 		console.log('previous');
 		timeOut();
@@ -59,7 +59,7 @@ document.addEventListener('keydown', (event) => {
 	}
 	
 });
-const pause = document.querySelector('#pause');
+var pause = document.querySelector('#pause');
 pause.addEventListener('click', (event) => {
 		if (playing) {
 			console.log('pause');

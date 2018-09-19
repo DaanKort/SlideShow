@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/DaanKort/SlideShow/issues"
   },
-  "homepage": "https://github.com/DaanKort/SlideShow#readme"
+  "homepage": "https://github.com/DaanKort/SlideShow#readme",
+  "dependencies": {
+    "gulp-eslint": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-babel": "^5.2.0"
+  }
 }
