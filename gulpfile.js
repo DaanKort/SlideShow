@@ -14,7 +14,7 @@ gulp.task('sass:watch',  () => {
     gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
-gulp.task('serve', ['sass', 'lint'], () => {
+gulp.task('default', ['sass', 'lint'], () => {
 
     gulp.watch("../slider/scss/*.scss", ['sass']);
     gulp.watch("../slider/*.html").on('change');
