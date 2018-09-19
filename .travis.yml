@@ -9,5 +9,5 @@ before_install:
   - npm install -g gulp-cli
 
 before_script:
-  - npm install
+  - npm install gulp
 script: gulp
