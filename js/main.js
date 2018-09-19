@@ -6,15 +6,12 @@ let playing = true;
 let timer;
 timeOut();
 
-
 images[0] = 'img/bird.jpg';
 images[1] = 'img/windows.jpeg';
 images[2] = 'img/tree.jpeg';
 
-
 function slideImgNext() {
 	slider.src = images[i];
-
 	if (i < images.length - 1){
 		i = i + 1; 
 	} else {
@@ -25,7 +22,6 @@ function slideImgNext() {
 
 function slideImgPrevious() {
 	slider.src = images[i];
-
 	if (i > 0){
 		i = i - 1; 
 	} else {
@@ -37,8 +33,7 @@ function slideImgPrevious() {
 function timeOut() {
 	clearInterval(timer);	
 	timer = setInterval(slideImgNext, 2000);
-}
-	
+}	
 const left = document.querySelector('#previous');
 const right = document.querySelector('#next');
 left.addEventListener('click', (event) => {	
