@@ -1,7 +1,6 @@
 'use strict';
 
 const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const eslint = require('gulp-eslint');
 
@@ -22,9 +21,8 @@ gulp.task('serve', ['sass', 'lint'], () => {
     });
 
     gulp.watch("../slider/scss/*.scss", ['sass']);
-	gulp.watch("../slider/*.html").on('change', browserSync.reload);
-	gulp.watch("../slider/*.css").on('change', browserSync.reload);
-	gulp.watch("../slider/*.js").on('change', browserSync.reload);
+	gulp.watch("../slider/*.html").on('change');
+	gulp.watch("../slider/*.css").on('change');
 });
 
 gulp.task('lint', () => {
