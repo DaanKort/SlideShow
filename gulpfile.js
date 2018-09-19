@@ -16,10 +16,6 @@ gulp.task('sass:watch',  () => {
 
 gulp.task('serve', ['sass', 'lint'], () => {
 
-    browserSync.init({
-        server: "../slider"
-    });
-
     gulp.watch("../slider/scss/*.scss", ['sass']);
 	gulp.watch("../slider/*.html").on('change');
 	gulp.watch("../slider/*.css").on('change');
