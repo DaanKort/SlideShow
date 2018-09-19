@@ -7,10 +7,8 @@ env:
 
 before_install:
   - npm install -g gulp-cli
-  - npm install gulp --save-dev
 
 before_script:
   - npm install
-script: gulp
 
-  - npm install
+script: gulp

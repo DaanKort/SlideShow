@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DaanKort/SlideShow#readme",
   "dependencies": {
+    "gulp": "^3.9.1",
     "gulp-eslint": "^5.0.0"
   },
   "devDependencies": {
@@ -27,7 +28,6 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gulp": "^4.0.0",
     "gulp-sass": "^4.0.1"
   }
 }
