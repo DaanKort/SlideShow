@@ -1,3 +1,4 @@
+'use strict';
 
 var i = 0;
 var images = [];
@@ -60,7 +61,7 @@ document.addEventListener('click', function(event){
 	if(event.target.className.includes('button--previous')){
 		console.log('previous');
 		timeOut();
-		slideImgPrevious()
+		slideImgPrevious();
 	}
 });
 
@@ -78,7 +79,7 @@ document.addEventListener('keydown', function (event) {
 		console.log('right');
 	}
 	else if (event.keyCode == 39 || event.keyCode == 68 ) {
-		slideImgPrevious()
+		slideImgPrevious();
 		console.log('left');
 	}
 	
