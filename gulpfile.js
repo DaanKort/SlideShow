@@ -43,4 +43,4 @@ gulp.task('hello', function() {
 	console.log('hey')
 })
 
-gulp.task('default', ['serve','sass', 'lint']);
+gulp.task('default', ['sass', 'lint']);
